@@ -22,9 +22,12 @@ extension Color {
     static let customSalmonLight = Color("ColorSalmonLight")
     
     static let gradGray = LinearGradient(colors: [.customGrayLight, .customGrayMedium], startPoint: .top, endPoint: .bottom)
+    static let gradReversedGray = LinearGradient(colors: [.customGrayLight, .customGrayMedium], startPoint: .bottom, endPoint: .top)
+    
     static let gradWhiteToGreen = LinearGradient(colors: [.white, .customGreenLight, .customGreenMedium], startPoint: .top, endPoint: .bottom)
-    static let gradIndigoToSalmon = LinearGradient(colors: [.customIndigoMedium, .customSalmonLight], startPoint: .topLeading, endPoint: .bottomTrailing)
     static let gradGreen = LinearGradient(colors: [.customGreenLight, .customGreenMedium], startPoint: .top, endPoint: .bottom)
+    
+    static let gradIndigoToSalmon = LinearGradient(colors: [.customIndigoMedium, .customSalmonLight], startPoint: .topLeading, endPoint: .bottomTrailing)
 }
 
 
