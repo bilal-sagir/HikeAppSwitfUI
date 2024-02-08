@@ -23,14 +23,12 @@ struct CustomBackgroundView: View {
             
             // MARK: - 1. SURFACE
             
-            LinearGradient(colors: [Color.customGreenLight,
-                                    Color.customGreenMedium],
-                           startPoint: .top,
-                           endPoint: .bottom)
-            .clipShape(.rect(cornerRadii: RectangleCornerRadii(topLeading: 40,
-                                                               bottomLeading: 40,
-                                                               bottomTrailing: 40,
-                                                           topTrailing: 40)))
+            Color
+                .gradGreen
+                .clipShape(.rect(cornerRadii: RectangleCornerRadii(topLeading: 40,
+                                                                   bottomLeading: 40,
+                                                                   bottomTrailing: 40,
+                                                                   topTrailing: 40)))
         }
     }
 }
