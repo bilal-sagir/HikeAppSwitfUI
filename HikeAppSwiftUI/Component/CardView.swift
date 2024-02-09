@@ -12,6 +12,7 @@ struct CardView: View {
     // MARK: - PROPERTIES
     @State private var imageNumber = 1
     @State private var randomNumber = 1
+    @State private var isShowingSheet: Bool = false
     
     // MARK: - FUNCTIONS
     
@@ -38,10 +39,15 @@ struct CardView: View {
                         
                         Button {
                             // ACTION: Show a Sheet
-                            print("The button was pressed.")
+                            isShowingSheet.toggle()
                         } label: {
                             CustomButtonView()
                         }
+                        .sheet(isPresented: $isShowingSheet, content: {
+                            SettingsView()
+                                .presentationDragIndicator(.visible)
+                                .presentationDetents([.fraction(0.3), .medium, .large]) // ToMe: .fraction is usefull
+                        })
                     } //: HSTACK
                     
                     Text("Fun and enjoyable outdoor activity for friend and families.")

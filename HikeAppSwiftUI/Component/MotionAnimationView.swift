@@ -61,7 +61,7 @@ struct MotionAnimationView: View {
         .frame(width: 256, height: 256)
         
         .mask(Circle())
-        .drawingGroup() // Metal framework  for faster rendering
+        .drawingGroup() // Metal framework for faster rendering
     }
 }
 

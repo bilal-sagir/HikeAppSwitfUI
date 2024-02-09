@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9C1825562B75A6E800F64B17 /* CustomCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1825552B75A6E800F64B17 /* CustomCircleView.swift */; };
 		9C1825582B75A91F00F64B17 /* MotionAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1825572B75A91F00F64B17 /* MotionAnimationView.swift */; };
+		9C18255B2B75B1E900F64B17 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C18255A2B75B1E900F64B17 /* SettingsView.swift */; };
 		9C3743C82B74575A0054144F /* HikeAppSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3743C72B74575A0054144F /* HikeAppSwiftUIApp.swift */; };
 		9C3743CA2B74575A0054144F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3743C92B74575A0054144F /* ContentView.swift */; };
 		9C3743CC2B74575C0054144F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C3743CB2B74575C0054144F /* Assets.xcassets */; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		9C1825552B75A6E800F64B17 /* CustomCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCircleView.swift; sourceTree = "<group>"; };
 		9C1825572B75A91F00F64B17 /* MotionAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionAnimationView.swift; sourceTree = "<group>"; };
+		9C18255A2B75B1E900F64B17 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		9C3743C42B74575A0054144F /* HikeAppSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HikeAppSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C3743C72B74575A0054144F /* HikeAppSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HikeAppSwiftUIApp.swift; sourceTree = "<group>"; };
 		9C3743C92B74575A0054144F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -46,6 +48,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9C1825592B75B1D500F64B17 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				9C3743C92B74575A0054144F /* ContentView.swift */,
+				9C18255A2B75B1E900F64B17 /* SettingsView.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
 		9C3743BB2B74575A0054144F = {
 			isa = PBXGroup;
 			children = (
@@ -69,7 +80,7 @@
 				9C3743DA2B745DAA0054144F /* Utility */,
 				9C3743CD2B74575C0054144F /* Preview Content */,
 				9C3743C72B74575A0054144F /* HikeAppSwiftUIApp.swift */,
-				9C3743C92B74575A0054144F /* ContentView.swift */,
+				9C1825592B75B1D500F64B17 /* Screen */,
 				9C3743CB2B74575C0054144F /* Assets.xcassets */,
 			);
 			path = HikeAppSwiftUI;
@@ -179,6 +190,7 @@
 				9C3743D62B74592C0054144F /* CardView.swift in Sources */,
 				9C3743C82B74575A0054144F /* HikeAppSwiftUIApp.swift in Sources */,
 				9C3743DE2B7463F90054144F /* CustomButtonView.swift in Sources */,
+				9C18255B2B75B1E900F64B17 /* SettingsView.swift in Sources */,
 				9C3743E02B7470590054144F /* GradientButtonStyle.swift in Sources */,
 				9C1825582B75A91F00F64B17 /* MotionAnimationView.swift in Sources */,
 				9C3743D92B745A770054144F /* CustomBackgroundView.swift in Sources */,
