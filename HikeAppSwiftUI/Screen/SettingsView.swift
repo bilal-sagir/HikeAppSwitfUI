@@ -8,6 +8,17 @@
 import SwiftUI
 
 struct SettingsView: View {
+    
+    // MARK: - PROPERTIES
+    
+    private let alternateAppIcons: [String] = [
+        "AppIcon-MagnifyingGlass",
+        "AppIcon-Map",
+        "AppIcon-Mushroom",
+        "AppIcon-Camera",
+        "AppIcon-Backpack",
+        "AppIcon-Campfire"]
+    
     var body: some View {
         List {
             // MARK: - SECTION: HEADER
@@ -47,7 +58,41 @@ struct SettingsView: View {
             } //: HEADER SECTION
             .listRowSeparator(.hidden)
             // MARK: - SECTION: ICONS
-            
+            Section {
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack(spacing: 12) {
+                        ForEach(alternateAppIcons.indices, id: \.self) { item in
+                            Button(action: {
+                                UIApplication.shared.setAlternateIconName(alternateAppIcons[item]) { error in
+                                    if error != nil {
+                                        print("Failed requested to update the app's icon: \(String(describing: error?.localizedDescription))")
+                                    } else {
+                                        print("succcess!")
+                                    }
+                                }
+                            }, label: {
+                                Image("\(alternateAppIcons[item])-Preview")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 80, height: 80)
+                                    .cornerRadius(16)
+                            })
+                            .buttonStyle(.borderless)
+                        }
+                    }
+                } //: SCROLL VIEW
+                .padding(.top, 12)
+                Text("Choose your favorite app icon from collection above.")
+                    .frame(minWidth: 0, maxWidth: .infinity)
+                    .multilineTextAlignment(.center)
+                    .foregroundColor(.secondary)
+                    .font(.footnote)
+                    .padding(.bottom, 12)
+            } header: {
+                Text("Alternate Icons")
+            } //: SECTION
+            .listRowSeparator(.hidden)
+
             // MARK: - SECTION: ABOUT
             Section {
                 // Basic labeledContent
