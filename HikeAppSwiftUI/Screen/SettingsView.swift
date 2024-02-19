@@ -47,7 +47,57 @@ struct SettingsView: View {
             } //: HEADER SECTION
             .listRowSeparator(.hidden)
             // MARK: - SECTION: ICONS
+            
             // MARK: - SECTION: ABOUT
+            Section {
+                // Basic labeledContent
+                //LabeledContent("Application", value: "Hike")
+                
+                CustomListRowView(rowLabel: "Application",
+                                  rowIcon: "apps.iphone",
+                                  rowContent: "Hike",
+                                  rowTintColor: .blue)
+                
+                CustomListRowView(rowLabel: "Compatibility",
+                                  rowIcon: "info.circle",
+                                  rowContent: "iOS, iPadOS",
+                                  rowTintColor: .red)
+                
+                CustomListRowView(rowLabel: "Technology",
+                                  rowIcon: "swift",
+                                  rowContent: "Swift",
+                                  rowTintColor: .orange)
+                
+                CustomListRowView(rowLabel: "Version",
+                                  rowIcon: "gear",
+                                  rowContent: "1.0",
+                                  rowTintColor: .purple)
+                
+                CustomListRowView(rowLabel: "Developer",
+                                  rowIcon: "ellipsis.curlybraces",
+                                  rowContent: "Bill S",
+                                  rowTintColor: .mint)
+                
+                CustomListRowView(rowLabel: "Designer",
+                                  rowIcon: "paintpalette",
+                                  rowContent: "Bill",
+                                  rowTintColor: .pink)
+                
+                CustomListRowView(rowLabel: "Website",
+                                  rowIcon: "globe",
+                                  rowTintColor: .indigo,
+                                  rowLinkLabel: "google.com",
+                                  rowLinkDestination: "https://google.com")
+
+            } header: {
+                Text("ABOUT THE APP")
+            } footer: {
+                HStack {
+                    Spacer()
+                    Text("Copywrite © all right reserved")
+                    Spacer()
+                } .padding(.vertical, 8)
+            } //: SECTION
         } //: LIST
         
     }
